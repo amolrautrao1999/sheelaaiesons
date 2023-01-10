@@ -1,71 +1,21 @@
 
 .topbar
 {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 2rem;
-    line-height: 2rem;
+    font-size: medium;
     font-family:  Arial, Helvetica, sans-serif;
     font-weight: 500;
+    color: greenyellow;
 }
-.navbar-custom
-{
-    display: flex;
-    justify-content: space-around;
-    font-family: 'Roboto Mono', monospace;
-}
-.navbar-custom img
-{
-    max-height: 50px;
-}
-.navbar-custom a
-{
-    font-size: 18px !important;
-    text-transform: uppercase;
-}
-.main-div
-{
-    /* box-shadow: yellowgreen inset  0px 5px 100px -20px,yellowgreen 0px 5px 60px -30px; */
-    background-color: rgb(249, 243, 232);
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    
-}
-@media all and (max-width:968px) {
-    .logo{
-        width: 100%;
-        /* text-align: center !important; */
-        margin-left: 25%;
-    } 
-    .nav-hide
-    {
-        width: 100%;
-        text-align: center !important;
-    } 
-    .navbar-toggler
-    {
-        text-align: center;
-        margin-left: 25%;
-    } 
-    .show{
-        width: 100%;
-        text-align: center !important;
-        margin: 0 43%;
-    }  
-    .show ul
-    {
-        text-align: start;
-        width: 100%;
-    } 
-    .show ul li
-    {
-        text-align: start;
-        width: 100%;
-    } 
-}
-/* carouder */
 
-
+.carausel-img
+{
+    height:40rem;
+    width:100%
+}
 .carousel-heading
 {
     text-transform: uppercase;
@@ -73,23 +23,42 @@
     font-weight: bold; 
     font-family: 'Raleway', sans-serif;
 }
-.carousel-heading
+@import "https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Josefin+Sans:wght@500&display=swap";
+.carousel-data
 {
-    font-family: 'Raleway', sans-serif;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 3rem;
+  
+    /* margin-bottom: 4rem; */
 }
-
+.carousel-data p
+{
+    font-size: 1rem;
+    text-shadow:0 0 15px #000000;
+}
+.carousel-data h1
+{
+    font-family: 'Dongle', sans-serif !important;
+    font-size: 4.5rem;
+    text-shadow:0 0 15px #000000;
+    text-transform: uppercase;
+}
 .btn-contact-carousel
 {
-    height: 3rem;
-    width: 11rem;
+    /* height: 3rem; */
+    /* width: 8rem; */
     border-radius: 5rem;
     border: 2px solid #0b94d6;
-    background-color: #0b94d6;
+    background-color: #4e6570;
     color: white;
+    font-size: small;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
-    margin: 20px 0;
     transition: all 1s;
+    padding:10px;
+    text-decoration:none;
+    margin:3rem 0 !important;
 }
 .btn-contact-carousel:hover
 {
@@ -100,41 +69,20 @@
 
 /* carouder END */
 
-/* .right
-{
-    float: right;
-} */
+
 .nav-link
 {
     font-size: 25px !important;
     margin: 0px 15px;
     font-weight: 600;
-    /* color: white !important; */
-   
-    /* border-radius: 10%; */
+   }
 
-}
-/* .nav-link::before
+/* .nav-link:hover
 {
-    content: "";
-    border-top: 4px solid black;
-    border-left: 4px solid black;
-    height: 2px;
-    width: 20px;
-
-    background-color: black;
-    display: block;
-    position: relative;
-} */
-.nav-link:hover
-{
-    /* color: yellowgreen !important; */
-    /* box-shadow: 0 0 10px black,0 0 10px #33ffff,0 0 10px #33ffff; */
-    color: black;
+   color: black;
     border-radius: 5px;
     text-decoration: none;
-    /* border: 1px solid black; */
-}
+} */
 
 .dropdown-menu:hover > li
 {
@@ -144,16 +92,48 @@
 }
 .enquiry
 {
-    /* animation: showEffect 2s infinite;4 */
-    
-    /* animation-name: showEffect;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-duration: 2.3s; */
     animation: showEffect 1s ease-in-out infinite;
     color: blue;
 }
 @keyframes showEffect {
     0% { opacity: 0.1;  }
     100% { opacity: 1; }
+}
+@media screen and (max-width: 633px) {   
+    .topbar
+    {
+        font-size: small;
+        box-sizing: border-box;
+    }
+    .carousel-data
+    {
+        margin-bottom: 1rem;
+    }
+    .carausel-img
+    {
+        height:30rem;
+        width:100%
+    }
+.carousel-data h1
+{
+    font-size: 2rem !important;
+}
+.carousel-data p
+{
+    font-size: .7rem !important;
+}
+.btn-contact-carousel
+{
+    height: 2rem;
+    width: 8rem;
+    border-radius: 5rem;
+    border: 1px solid #0b94d6;
+    background-color: #0b94d6;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    margin: 3rem 0;
+    font-size: x-small;
+    transition: all 1s;
+}
 }

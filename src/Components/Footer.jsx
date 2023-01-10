@@ -23,22 +23,22 @@ const Footer = () => {
                             <ul className={style.quick_links}>
                                 <li><NavLink to="/about">About us</NavLink></li>
                                 <li><NavLink to="/about">About our pest control</NavLink></li>
-                                <li><NavLink to="/faq">FAQ</NavLink></li>
+                                <li><NavLink to="/*">FAQ</NavLink></li>
                                 <li><NavLink to="/contact">Contact us</NavLink></li>
                             </ul>
                             </div>
                         <div className="col-md-3"><h3>Follow us</h3>
                         <p>We would like to stay connected with each other.</p>
                         <div className={style.icons}>
-                        <a href="https://www.facebook.com/"><i className="bi bi-facebook"  title='Connect with facebook'></i></a>
-                        <a href="https://www.instagram.com/"><i className="bi bi-instagram" title='Connect with instagram'></i></a>
-                        <a href="https://wa.me/+919021136040?text=Hi, Give me further information about pest-control services."><i className="bi bi-whatsapp" title='Connect with whatsapp'></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100063527845357&mibextid=LQQJ4d" target="_blank"><i className="bi bi-facebook"  title='Connect with facebook'></i></a>
+                        <a href="https://instagram.com/sheelaaie_sons_india?igshid=MDM4ZDc5MmU=" target="_blank"><i className="bi bi-instagram" title='Connect with instagram'></i></a>
+                        <a href="https://wa.me/+919021136040?text=Hi, Give me further information about pest-control services." target="_blank"><i className="bi bi-whatsapp" title='Connect with whatsapp'></i></a>
                       
                         </div>
                         </div>
                     </div>
                     <div className={`${style.copy} text-center mt-5`}>
-                       <p>&copy; Copyright {new Date().getFullYear()} <span className={style.brand}>SHEELAAIE SONS PEST CONTROL MANAGEMENT</span> All rights reserved</p>  
+                       <p>&copy; Copyright {new Date().getFullYear()} <NavLink to="/" className={style.brand}>SHEELAAIE SONS PEST CONTROL MANAGEMENT</NavLink> All rights reserved</p>  
                     </div>
                 </div>
             </footer>

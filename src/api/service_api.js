@@ -5,7 +5,8 @@ import Rodent from '../img/Rodent.jpg'
 import ant from '../img/ant.jpg'
 import spider from '../img/spider.jpg'
 import Flies  from '../img/flies.jpg'
-import loading  from '../img/loading.png'
+import weed  from '../img/weed.jpg'
+import bird  from '../img/bird.jpg'
 const service=[
     {
         id:1,
@@ -50,16 +51,16 @@ const service=[
         desc:"House flies, for example, can spread diseases such as food poisoning and dysentery. Flies, including stable flies and mosquitoes (which are also classified as flies, or Diptera), can inflict painful bites while feeding on the blood of humans and other animals, and some species transmit disease."
     },
     {
-        id:3,
+        id:8,
         name:"weed",
-        imgsrc:loading,
-        desc:"Termites can sting and bite. These wounds aren't toxic and termites don't carry or transmit diseases to humans. However, certain people can experience allergic reactions or even asthma attacks in homes where termites reside. Some people are sensitive or allergic to termite saliva and droppings."
+        imgsrc:weed,
+        desc:"Weed control is a type of pest control, which attempts to stop or reduce growth of weeds, especially noxious weeds, with the aim of reducing their competition with desired flora and fauna including domesticated plants and livestock, and in natural settings preventing non native species competing with native species."
     },
     {
-        id:3,
+        id:9,
         name:"bird",
-        imgsrc:loading,
-        desc:"Termites can sting and bite. These wounds aren't toxic and termites don't carry or transmit diseases to humans. However, certain people can experience allergic reactions or even asthma attacks in homes where termites reside. Some people are sensitive or allergic to termite saliva and droppings."
+        imgsrc:bird,
+        desc:"Bird control is important because pest birds can create health-related problems through their feces, including histoplasmosis, cryptococcosis, and psittacosis.Bird droppings may also cause damage to property and equipment. Birds also frequently steal from crops and fruit orchards."
     },
    
 ]

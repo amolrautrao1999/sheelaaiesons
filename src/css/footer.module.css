@@ -73,5 +73,14 @@ footer
 .copy 
 {
     font-size: small;
-    margin-top: 2rem;
+    margin-top: 7rem !important;
+}
+.brand
+{
+    color: white;
+    text-decoration: none;
+}
+.brand:hover
+{
+    color: rgb(225, 225, 225);
 }

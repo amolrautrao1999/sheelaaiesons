@@ -9,8 +9,8 @@ const Service = () => {
         <section className={style.service}>
           <h2 className={`text-center py-5 text-secondary font-weight-bold ${style.heading}`} >OUR SERVICES</h2>
           <div className="container">
-            <div className={`row ${style.cards}`}>
-             { service.map((curVal,i)=>
+            <div className={style.cards}>
+             { service.map((curVal)=>
              <ServiceCard key={curVal.id} name={curVal.name} imgSrc={curVal.imgsrc} desc={curVal.desc}/>
               )}
                 

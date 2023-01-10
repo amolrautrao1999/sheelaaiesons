@@ -1,89 +1,90 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import './navbar.css'
 import logo from "../img/logo.jpg"
-import '../css/header.css'
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { HiMenu } from 'react-icons/hi'
+import { IoClose } from 'react-icons/io5'
 import Enquiry from "./Enquiry";
-const Navbar = () => {
-  return (
-    <>
-      <div className="main-div">
-        <div className="container navbar navbar-custom">
-          <NavLink className="navbar-brand " to="/">
-            <img src={logo} alt='logo' />
-          </NavLink>
-          <nav className="navbar navbar-expand-lg nav-hide">
-            <div className="container-fluid  show">
-              <div className="right">
-                <button
-                  className="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon"></span>
-                </button>
-                <div
-                  className="collapse navbar-collapse .nav"
-                  id="navbarSupportedContent">
-                  <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
-                      <NavLink className="nav-link" to="/">
-                        Home
-                      </NavLink>
-                    </li>
-                    <li className="nav-item">
-                      <NavLink className="nav-link" to="/about">
-                        About us
-                      </NavLink>
-                    </li>
-                    <li className="nav-item ">
-                      <NavLink
-                        className="nav-link"
-                        to="/service"
-                        role="button"
-                        data-bs-toggle=""
-                        aria-expanded="false">
-                        Services
-                      </NavLink>
-                      
-                    </li>
 
-                    <li className="nav-item">
-                      <NavLink
-                        className="nav-link enquiry"
-                        aria-current="page"
-                        // to="/enquiry"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal"
-                      >
-                        Enquiry
-                      </NavLink >
-                    </li>
-                    <li className="nav-item">
-                      <NavLink className="nav-link " aria-current="page" to="/contact">
-                        Contact Us
-                      </NavLink>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+const NewNav = () => {
+    const [isNavActive, setIsNavActive] = useState(false);
+
+    return (
+        <>
+            <header>
+                <nav className="navbar">
+                    <h2> <img src={logo} className="logo" width="100" alt='logo' /></h2>
+                    <ul id="list">
+                        <li><NavLink onClick={() => setIsNavActive(false)} to="/">
+                            Home
+                        </NavLink></li>
+                        <li><NavLink onClick={() => setIsNavActive(false)} to="/about">
+                            About us
+                        </NavLink></li>
+                        <li><NavLink onClick={() => setIsNavActive(false)}
+                            to="/service"
+                            role="button"
+                            data-bs-toggle=""
+                            aria-expanded="false">
+                            Services
+                        </NavLink></li>
+                        <li><NavLink onClick={() => setIsNavActive(false)}
+                            className="enquiry"
+                            aria-current="page"
+                            // to="/enquiry"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        >
+                            Enquiry
+                        </NavLink ></li>
+                        <li><NavLink onClick={() => setIsNavActive(false)} aria-current="page" to="/contact">
+                            Contact Us
+                        </NavLink></li>
+
+                    </ul>
+                    <ul id="hamBurger">
+                        <p className='text-white' onClick={() => setIsNavActive(!isNavActive)}>{isNavActive?<IoClose className='nav-icon'/>:<HiMenu className='nav-icon' />}</p>
+                    </ul>
+                    <ul className={isNavActive ? "responsive NavActive" : "responsive"} >
+                        <li ></li>
+                        <li><NavLink onClick={() => setIsNavActive(false)} to="/">
+                            Home
+                        </NavLink></li>
+                        <li><NavLink onClick={() => setIsNavActive(false)} to="/about">
+                            About us
+                        </NavLink></li>
+                        <li><NavLink onClick={() => setIsNavActive(false)}
+
+                            to="/service"
+                            role="button"
+                            data-bs-toggle=""
+                            aria-expanded="false">
+                            Services
+                        </NavLink></li>
+                        <li><NavLink onClick={() => setIsNavActive(false)}
+                            aria-current="page"
+                            // to="/enquiry"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        >
+                            Enquiry
+                        </NavLink ></li>
+                        <li><NavLink onClick={() => setIsNavActive(false)} aria-current="page" to="/contact">
+                            Contact Us
+                        </NavLink></li>
+
+                    </ul>
+                </nav>
+            </header>
+
+            {/* enquiry Modal */}
+
+            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                {<Enquiry title="Submit Your Enquiry" modal="modalBody" buttonType="reset" buttonTitle="Close" closeBtn={true} />}
             </div>
 
-          </nav>
-        </div>
-      </div>
 
+        </>
+    )
+}
 
-
-      {/* enquiry Modal */}
-
-      <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        {<Enquiry title="Submit Your Enquiry" modal="modalBody" buttonType="reset" buttonTitle="Close" closeBtn={true}/>}
-      </div>
-
-    </>
-  );
-};
-
-export default Navbar;
+export default NewNav
