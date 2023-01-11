@@ -1,5 +1,6 @@
 import { Carousel } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
+import '../css/header.css';
 import img1 from '../img/IMG1.png'
 import img2 from '../img/IMG5.png'
 import img3 from '../img/IMG6.png'
@@ -10,7 +11,6 @@ function CarouselFadeExample() {
 
   return (
     <Carousel fade className='main-carousel'>
-      
       <Carousel.Item  >
         <img 
         className="carausel-img"
@@ -29,7 +29,6 @@ function CarouselFadeExample() {
           src={img2}
           alt="Second slide"
         />
-
         <Carousel.Caption className=' carousel-data'>
           <h1>Commercial Pest Management</h1>
           <p> Our services ensure safety stability and the highest service efficiencies in equal measure.</p>
@@ -42,15 +41,13 @@ function CarouselFadeExample() {
           src={img3}
           alt="Third slide"
         />
-
         <Carousel.Caption className=' carousel-data'>
           <h1>Industrial Pest Management</h1>
           <p>
             Don't worry our team developing and working with mutual trust
           </p>
           <NavLink className='btn-contact-carousel '>Contact Now</NavLink>
-
-        </Carousel.Caption>
+ </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );

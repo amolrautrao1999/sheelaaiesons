@@ -5,11 +5,6 @@ header {
     top: 0;
     z-index: 2;    
 }
-.active
-{
-    /* color: red; */
-}
-
 /* 
 header::before {
     content: ' ';
@@ -44,6 +39,7 @@ header::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: none;
 }
 
 .navbar ul {
@@ -158,12 +154,12 @@ header::after {
         top: 0%;
         left: 100%;
         padding: 2rem 0;
-        z-index: 2;
-        height: 100vh;
-        background-color: rgb(24, 23, 24);
+        z-index: 9;
+        /* background-attachment: fixed !important; */
+        height: 100%;
+        background-color: rgb(0, 0, 0);
         width: 100%;
         transition: all 0.5s linear;
-        opacity: 0.9;
     }
 
     .navbar ul li {
@@ -172,6 +168,10 @@ header::after {
 
     .responsive.NavActive {
         left: 0%;
+        position: fixed !important;
+        background-attachment: fixed !important;
+        opacity: 1;
+        overflow: hidden;
     }
 
     /* .goal-right {
@@ -189,7 +189,7 @@ header::after {
     }
 }
 
-@media screen and (max-width: 633px) {
+/* @media screen and (max-width: 633px) {
     #home {
         flex-direction: column;
     }
@@ -223,4 +223,4 @@ header::after {
     .teamContainer {
         justify-content: center;
     }
-}
+} */
